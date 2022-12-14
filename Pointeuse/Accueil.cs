@@ -39,13 +39,6 @@ namespace Pointeuse
             sidebarTimer.Start();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Accueil accueil = new Accueil();
-            accueil.Show();
-            this.Hide();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Pointages pointages = new Pointages();
