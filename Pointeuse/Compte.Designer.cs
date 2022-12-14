@@ -50,6 +50,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.label_Bonjour = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -60,6 +65,7 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -335,12 +341,75 @@
             // 
             this.sidebarTimer.Interval = 20;
             // 
+            // label_Bonjour
+            // 
+            this.label_Bonjour.AutoSize = true;
+            this.label_Bonjour.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Bonjour.Location = new System.Drawing.Point(431, 135);
+            this.label_Bonjour.Name = "label_Bonjour";
+            this.label_Bonjour.Size = new System.Drawing.Size(114, 37);
+            this.label_Bonjour.TabIndex = 3;
+            this.label_Bonjour.Text = "Bonjour";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(292, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(407, 42);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Bienvenue sur votre espace compte\r\nVeuillez trouver la page de connexion juste en" +
+    " dessous";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(431, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button9
+            // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Location = new System.Drawing.Point(346, 263);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(117, 38);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Inscription";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.Location = new System.Drawing.Point(525, 263);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(117, 38);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "Connexion";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Compte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_Bonjour);
             this.Controls.Add(this.sidebar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
@@ -360,7 +429,9 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -386,5 +457,10 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Label label_Bonjour;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private Button button9;
+        private Button button10;
     }
 }

@@ -7,29 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.Logging;
 
-namespace Pointeuse.V1
+namespace Pointeuse
 {
-    public partial class login : Form
+    public partial class Inscription : Form
     {
-        public login()
+        public Inscription()
         {
             InitializeComponent();
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox1.Focus();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -37,17 +23,27 @@ namespace Pointeuse.V1
             if (checkBox1.Checked)
             {
                 textBox2.PasswordChar = '\0';
+                textBox3.PasswordChar = '\0';
             }
             else
             {
                 textBox2.PasswordChar = '●';
+                textBox3.PasswordChar = '●';
             }
         }
 
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox1.Focus();
+        }
         private void label6_Click(object sender, EventArgs e)
         {
-            resgister Resgister = new resgister();
-            Resgister.Show();
+            Connexion connexion = new Connexion();
+            connexion.Show();
             this.Hide();
         }
     }
