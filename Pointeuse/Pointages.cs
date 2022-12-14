@@ -55,13 +55,6 @@ namespace Pointeuse
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Pointages pointages = new Pointages();
-            pointages.Show();
-            this.Hide();
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Historique historique = new Historique();
