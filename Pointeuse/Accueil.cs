@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Pointeuse
 {
     public partial class Accueil : Form
@@ -79,6 +81,19 @@ namespace Pointeuse
             Info info = new Info();
             info.Show();
             this.Hide();
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            timer_heure.Start();
+            label_date.Text = DateTime.Now.ToLongDateString();
+            label_heure.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void timer_label_Tick(object sender, EventArgs e)
+        {
+            label_heure.Text = DateTime.Now.ToLongTimeString();
+            timer_heure.Start();
         }
     }
 }

@@ -50,6 +50,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.label_bonjour = new System.Windows.Forms.Label();
+            this.label_date = new System.Windows.Forms.Label();
+            this.label_heure = new System.Windows.Forms.Label();
+            this.timer_heure = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -210,7 +214,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Pointeuse.Properties.Resources.icons8_time_machine_32;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-25, -15);
+            this.button3.Location = new System.Drawing.Point(-23, -15);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -343,12 +347,50 @@
             this.sidebarTimer.Interval = 20;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // label_bonjour
+            // 
+            this.label_bonjour.AutoSize = true;
+            this.label_bonjour.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_bonjour.Location = new System.Drawing.Point(420, 50);
+            this.label_bonjour.Name = "label_bonjour";
+            this.label_bonjour.Size = new System.Drawing.Size(145, 47);
+            this.label_bonjour.TabIndex = 3;
+            this.label_bonjour.Text = "Bonjour";
+            this.label_bonjour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_date
+            // 
+            this.label_date.AutoSize = true;
+            this.label_date.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_date.Location = new System.Drawing.Point(716, 613);
+            this.label_date.Name = "label_date";
+            this.label_date.Size = new System.Drawing.Size(44, 21);
+            this.label_date.TabIndex = 4;
+            this.label_date.Text = "Date";
+            // 
+            // label_heure
+            // 
+            this.label_heure.AutoSize = true;
+            this.label_heure.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_heure.Location = new System.Drawing.Point(715, 633);
+            this.label_heure.Name = "label_heure";
+            this.label_heure.Size = new System.Drawing.Size(55, 21);
+            this.label_heure.TabIndex = 5;
+            this.label_heure.Text = "Heure";
+            // 
+            // timer_heure
+            // 
+            this.timer_heure.Tick += new System.EventHandler(this.timer_label_Tick);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.label_heure);
+            this.Controls.Add(this.label_date);
+            this.Controls.Add(this.label_bonjour);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -356,6 +398,7 @@
             this.Name = "Accueil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accueil";
+            this.Load += new System.EventHandler(this.Accueil_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -368,6 +411,7 @@
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -393,5 +437,9 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
+        private Label label_bonjour;
+        private Label label_date;
+        private Label label_heure;
+        private System.Windows.Forms.Timer timer_heure;
     }
 }
