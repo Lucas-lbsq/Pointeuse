@@ -1,4 +1,15 @@
 using System.Globalization;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Siticone.Desktop.UI.WinForms;
 
 namespace Pointeuse
 {
@@ -6,10 +17,26 @@ namespace Pointeuse
     public partial class Accueil : Form
     {
         bool sidebarExpand;
+        string dbPath = "myDatabase.db";
+        Form gFormAppelante;
 
         public Accueil()
         {
             InitializeComponent();
+        }
+        public Accueil(Color fore, Color back, Form formAppelante) : this()
+        {
+            ColorChange(fore);
+            BackColorChange(back);
+            gFormAppelante = formAppelante;
+        }
+
+        
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            timer_heure.Start();
+            label_date.Text = DateTime.Now.ToLongDateString();
+            label_heure.Text = DateTime.Now.ToLongDateString();
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -84,17 +111,34 @@ namespace Pointeuse
             this.Hide();
         }
 
-        private void Accueil_Load(object sender, EventArgs e)
-        {
-            timer_heure.Start();
-            label_date.Text = DateTime.Now.ToLongDateString();
-            label_heure.Text = DateTime.Now.ToLongDateString();
-        }
 
         private void timer_label_Tick(object sender, EventArgs e)
         {
             label_heure.Text = DateTime.Now.ToLongTimeString();
             timer_heure.Start();
+        }
+
+        //commentaire
+        void ColorChange(Color color)
+        {
+            sidebar.BackColor = button2.BackColor = button3.BackColor = button4.BackColor
+                              = button5.BackColor = button6.BackColor = button7.BackColor = button8.BackColor =
+                sidebar.ForeColor = color;
+            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
+                btn.BackColor = color;
+        }
+
+        //Changement de coleur du fond d'écran
+        void BackColorChange(Color color)
+        {
+            this.BackColor = color;
+            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
+                btn.BackColor = color;
+        }
+
+        private void Accueil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.gFormAppelante.Show();
         }
     }
 }
