@@ -398,6 +398,7 @@
             this.Name = "Accueil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accueil";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Accueil_FormClosed);
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

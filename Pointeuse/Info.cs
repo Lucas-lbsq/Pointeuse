@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Pointeuse
 {
-
     public partial class Info : Form
     {
         bool sidebarExpand;
         public Info()
         {
             InitializeComponent();
+
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
