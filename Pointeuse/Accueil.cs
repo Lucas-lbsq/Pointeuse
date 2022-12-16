@@ -2,6 +2,7 @@ using System.Globalization;
 
 namespace Pointeuse
 {
+
     public partial class Accueil : Form
     {
         bool sidebarExpand;

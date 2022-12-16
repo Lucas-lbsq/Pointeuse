@@ -364,10 +364,9 @@
             this.textBox1.Location = new System.Drawing.Point(121, 121);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(560, 117);
+            this.textBox1.Size = new System.Drawing.Size(560, 450);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Nom : Pointeuse\r\n\r\nVersion : V1.0.0\r\n\r\nDate de dernière mise à jour : 15/12/2022\r" +
-    "\n\r\nCopyright © 2022, Cram All rights reserved.";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // Info
             // 
