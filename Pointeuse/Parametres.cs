@@ -27,6 +27,7 @@ namespace Pointeuse
             BackColorChange(back);
         }
 
+        #region Couleur
         //Changement de couleur SideBar
         void ColorChange(Color color)
         {
@@ -56,6 +57,7 @@ namespace Pointeuse
             SiticoneRadioButton button = (SiticoneRadioButton)sender;
             BackColorChange(button.ForeColor);
         }
+        #endregion
 
         #region SideBar
         //Configurer la SideBar

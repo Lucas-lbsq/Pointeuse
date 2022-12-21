@@ -19,7 +19,7 @@ namespace Pointeuse
             InitializeComponent();
         }
 
-
+        //Champ mot de passe : ●
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -31,6 +31,8 @@ namespace Pointeuse
                 textBox2.PasswordChar = '●';
             }
         }
+
+        //Button Effacer
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -38,6 +40,7 @@ namespace Pointeuse
             textBox1.Focus();
         }
 
+        //Redirection vers Inscription
         private void label6_Click(object sender, EventArgs e)
         {
             Inscription inscription = new Inscription();

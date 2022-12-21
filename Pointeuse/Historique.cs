@@ -18,6 +18,7 @@ namespace Pointeuse
             InitializeComponent();
         }
 
+        #region SideBar
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             //Bouger la SideBar
@@ -42,7 +43,9 @@ namespace Pointeuse
                 }
             }
         }
+        #endregion
 
+        #region Redirection boutton
         private void menuButton_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
@@ -89,5 +92,6 @@ namespace Pointeuse
             info.Show();
             this.Hide();
         }
+        #endregion
     }
 }

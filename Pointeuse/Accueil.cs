@@ -11,13 +11,13 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Siticone.Desktop.UI.WinForms;
 
+
 namespace Pointeuse
 {
 
     public partial class Accueil : Form
     {
         bool sidebarExpand;
-        string dbPath = "myDatabase.db";
         Form gFormAppelante;
 
         public Accueil()
@@ -39,6 +39,7 @@ namespace Pointeuse
             label_heure.Text = DateTime.Now.ToLongDateString();
         }
 
+        #region SideBar
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             //Bouger la SideBar
@@ -63,7 +64,9 @@ namespace Pointeuse
                 }
             }
         }
+        #endregion
 
+        #region Redirection boutton
         private void menuButton_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
@@ -110,7 +113,7 @@ namespace Pointeuse
             info.Show();
             this.Hide();
         }
-
+        #endregion
 
         private void timer_label_Tick(object sender, EventArgs e)
         {
@@ -118,6 +121,7 @@ namespace Pointeuse
             timer_heure.Start();
         }
 
+        #region
         //commentaire
         void ColorChange(Color color)
         {
@@ -140,5 +144,6 @@ namespace Pointeuse
         {
             this.gFormAppelante.Show();
         }
+        #endregion
     }
 }

@@ -18,6 +18,7 @@ namespace Pointeuse
             InitializeComponent();
         }
 
+        //Champ password caché
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -32,7 +33,7 @@ namespace Pointeuse
             }
         }
 
-
+        //Boutton Effacer
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -40,6 +41,8 @@ namespace Pointeuse
             textBox3.Text = "";
             textBox1.Focus();
         }
+
+        //Redirection vers Connexion
         private void label6_Click(object sender, EventArgs e)
         {
             Connexion connexion = new Connexion();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Globalization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +8,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Siticone.Desktop.UI.WinForms;
+
 
 namespace Pointeuse
 {
     public partial class Info : Form
     {
         bool sidebarExpand;
+        Form gFormAppelante;
+
         public Info()
         {
             InitializeComponent();
 
+        }
+
+        public Info(Color fore, Color back,Form formAppelante) : this()
+        {
+            ColorChange(fore);
+            BackColorChange(back);
+            gFormAppelante = formAppelante;
+
+        }
+
+        //commentaire
+        void ColorChange(Color color)
+        {
+            sidebar.BackColor = button2.BackColor = button3.BackColor = button4.BackColor
+                              = button5.BackColor = button6.BackColor = button7.BackColor = button8.BackColor =
+                sidebar.ForeColor = color;
+            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
+                btn.BackColor = color;
+        }
+
+        //Changement de coleur du fond d'écran
+        void BackColorChange(Color color)
+        {
+            this.BackColor = color;
+            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
+                btn.BackColor = color;
+        }
+
+        private void Info_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.gFormAppelante.Show();
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
