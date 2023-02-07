@@ -1,4 +1,10 @@
-﻿namespace Pointeuse
+﻿using System.Data.Common;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using Pointeuse.db_contexts;
+using Pointeuse.Entités;
+
+namespace Pointeuse
 {
     public partial class Inscription : Form
     {
@@ -41,6 +47,26 @@
         private void button_inscription_Click(object sender, EventArgs e)
         {
 
+            DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+            _connexion.Open();
+
+            DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+
+            PointeuseContext context = new PointeuseContext(_contextOptions);
+            context.Database.EnsureCreated();
+
+            Users utilisateurInscription = new Users()
+            {
+                Nom = textBox_nom.Text,
+                Prenom = textBox_prenom.Text,
+                Password = textBox_password.Text,
+                Identifiant = textBox_identifiant.Text,
+                Service = ""
+            };
+            var users = context.Users.ToList();
+            var booll = context.Users.Add(utilisateurInscription);
+            Console.Write(booll);
+            context.SaveChanges();
         }
     }
 }
