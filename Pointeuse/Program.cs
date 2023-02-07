@@ -1,4 +1,10 @@
+using Microsoft.VisualBasic.ApplicationServices;
+using Pointeuse;
+using Pointeuse.db_contexts;
+
+
 namespace Pointeuse
+
 {
     internal static class Program
     {
@@ -13,5 +19,6 @@ namespace Pointeuse
             ApplicationConfiguration.Initialize();
             Application.Run(new Accueil());
         }
+
     }
 }
