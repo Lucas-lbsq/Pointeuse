@@ -38,13 +38,13 @@
             this.label_confirmpassword = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.label_password = new System.Windows.Forms.Label();
-            this.textBox_identifiant = new System.Windows.Forms.TextBox();
+            this.textBox_nom = new System.Windows.Forms.TextBox();
             this.label_identifiant = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_titre = new System.Windows.Forms.Label();
             this.label_prenom = new System.Windows.Forms.Label();
             this.label_nom = new System.Windows.Forms.Label();
             this.textBox_prenom = new System.Windows.Forms.TextBox();
-            this.textBox_nom = new System.Windows.Forms.TextBox();
+            this.textBox_identifiant = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_connexion
@@ -57,7 +57,7 @@
             this.label_connexion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_connexion.Name = "label_connexion";
             this.label_connexion.Size = new System.Drawing.Size(253, 37);
-            this.label_connexion.TabIndex = 23;
+            this.label_connexion.TabIndex = 9;
             this.label_connexion.Text = "Page de connexion";
             this.label_connexion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_connexion.Click += new System.EventHandler(this.label6_Click);
@@ -71,7 +71,7 @@
             this.label_compte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_compte.Name = "label_compte";
             this.label_compte.Size = new System.Drawing.Size(251, 31);
-            this.label_compte.TabIndex = 22;
+            this.label_compte.TabIndex = 8;
             this.label_compte.Text = "J\'ai deja un compte";
             this.label_compte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -86,7 +86,7 @@
             this.button_effacer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_effacer.Name = "button_effacer";
             this.button_effacer.Size = new System.Drawing.Size(252, 40);
-            this.button_effacer.TabIndex = 21;
+            this.button_effacer.TabIndex = 7;
             this.button_effacer.Text = "Effacer";
             this.button_effacer.UseVisualStyleBackColor = false;
             this.button_effacer.Click += new System.EventHandler(this.button2_Click);
@@ -103,7 +103,7 @@
             this.button_inscription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_inscription.Name = "button_inscription";
             this.button_inscription.Size = new System.Drawing.Size(252, 40);
-            this.button_inscription.TabIndex = 20;
+            this.button_inscription.TabIndex = 6;
             this.button_inscription.Text = "S\'inscrire";
             this.button_inscription.UseVisualStyleBackColor = false;
             this.button_inscription.Click += new System.EventHandler(this.button_inscription_Click);
@@ -118,7 +118,7 @@
             this.checkBox_affficher.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBox_affficher.Name = "checkBox_affficher";
             this.checkBox_affficher.Size = new System.Drawing.Size(76, 21);
-            this.checkBox_affficher.TabIndex = 19;
+            this.checkBox_affficher.TabIndex = 5;
             this.checkBox_affficher.Text = "Afficher";
             this.checkBox_affficher.UseVisualStyleBackColor = true;
             this.checkBox_affficher.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -127,15 +127,17 @@
             // 
             this.textBox_confirmpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBox_confirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_confirmpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox_confirmpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox_confirmpassword.ForeColor = System.Drawing.Color.Brown;
             this.textBox_confirmpassword.Location = new System.Drawing.Point(44, 433);
             this.textBox_confirmpassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox_confirmpassword.MaxLength = 15;
             this.textBox_confirmpassword.Multiline = true;
             this.textBox_confirmpassword.Name = "textBox_confirmpassword";
             this.textBox_confirmpassword.PasswordChar = '•';
             this.textBox_confirmpassword.Size = new System.Drawing.Size(252, 32);
-            this.textBox_confirmpassword.TabIndex = 18;
+            this.textBox_confirmpassword.TabIndex = 4;
             // 
             // label_confirmpassword
             // 
@@ -147,22 +149,24 @@
             this.label_confirmpassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_confirmpassword.Name = "label_confirmpassword";
             this.label_confirmpassword.Size = new System.Drawing.Size(191, 21);
-            this.label_confirmpassword.TabIndex = 17;
+            this.label_confirmpassword.TabIndex = 15;
             this.label_confirmpassword.Text = "Confirmer mot de passe";
             // 
             // textBox_password
             // 
             this.textBox_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox_password.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox_password.ForeColor = System.Drawing.Color.Brown;
             this.textBox_password.Location = new System.Drawing.Point(44, 355);
             this.textBox_password.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox_password.MaxLength = 30;
             this.textBox_password.Multiline = true;
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '•';
             this.textBox_password.Size = new System.Drawing.Size(252, 32);
-            this.textBox_password.TabIndex = 16;
+            this.textBox_password.TabIndex = 3;
             // 
             // label_password
             // 
@@ -174,21 +178,23 @@
             this.label_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(110, 21);
-            this.label_password.TabIndex = 15;
+            this.label_password.TabIndex = 14;
             this.label_password.Text = "Mot de passe";
             // 
-            // textBox_identifiant
+            // textBox_nom
             // 
-            this.textBox_identifiant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox_identifiant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_identifiant.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_identifiant.ForeColor = System.Drawing.Color.Brown;
-            this.textBox_identifiant.Location = new System.Drawing.Point(44, 280);
-            this.textBox_identifiant.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox_identifiant.Multiline = true;
-            this.textBox_identifiant.Name = "textBox_identifiant";
-            this.textBox_identifiant.Size = new System.Drawing.Size(252, 32);
-            this.textBox_identifiant.TabIndex = 14;
+            this.textBox_nom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBox_nom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_nom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_nom.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox_nom.ForeColor = System.Drawing.Color.Brown;
+            this.textBox_nom.Location = new System.Drawing.Point(45, 134);
+            this.textBox_nom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox_nom.MaxLength = 40;
+            this.textBox_nom.Multiline = true;
+            this.textBox_nom.Name = "textBox_nom";
+            this.textBox_nom.Size = new System.Drawing.Size(252, 32);
+            this.textBox_nom.TabIndex = 0;
             // 
             // label_identifiant
             // 
@@ -203,17 +209,17 @@
             this.label_identifiant.TabIndex = 13;
             this.label_identifiant.Text = "Identifiant";
             // 
-            // label1
+            // label_titre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(36, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 37);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "S\'inscrire";
+            this.label_titre.AutoSize = true;
+            this.label_titre.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_titre.ForeColor = System.Drawing.Color.Brown;
+            this.label_titre.Location = new System.Drawing.Point(36, 32);
+            this.label_titre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_titre.Name = "label_titre";
+            this.label_titre.Size = new System.Drawing.Size(134, 37);
+            this.label_titre.TabIndex = 10;
+            this.label_titre.Text = "S\'inscrire";
             // 
             // label_prenom
             // 
@@ -225,7 +231,7 @@
             this.label_prenom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_prenom.Name = "label_prenom";
             this.label_prenom.Size = new System.Drawing.Size(70, 21);
-            this.label_prenom.TabIndex = 26;
+            this.label_prenom.TabIndex = 12;
             this.label_prenom.Text = "Prénom";
             // 
             // label_nom
@@ -234,45 +240,49 @@
             this.label_nom.BackColor = System.Drawing.SystemColors.Control;
             this.label_nom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_nom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label_nom.Location = new System.Drawing.Point(44, 102);
+            this.label_nom.Location = new System.Drawing.Point(44, 106);
             this.label_nom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_nom.Name = "label_nom";
             this.label_nom.Size = new System.Drawing.Size(48, 21);
-            this.label_nom.TabIndex = 24;
+            this.label_nom.TabIndex = 11;
             this.label_nom.Text = "Nom";
             // 
             // textBox_prenom
             // 
             this.textBox_prenom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBox_prenom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_prenom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox_prenom.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox_prenom.ForeColor = System.Drawing.Color.Brown;
             this.textBox_prenom.Location = new System.Drawing.Point(45, 203);
             this.textBox_prenom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox_prenom.MaxLength = 40;
             this.textBox_prenom.Multiline = true;
             this.textBox_prenom.Name = "textBox_prenom";
             this.textBox_prenom.Size = new System.Drawing.Size(252, 32);
-            this.textBox_prenom.TabIndex = 28;
+            this.textBox_prenom.TabIndex = 1;
             // 
-            // textBox_nom
+            // textBox_identifiant
             // 
-            this.textBox_nom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox_nom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_nom.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_nom.ForeColor = System.Drawing.Color.Brown;
-            this.textBox_nom.Location = new System.Drawing.Point(44, 130);
-            this.textBox_nom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox_nom.Multiline = true;
-            this.textBox_nom.Name = "textBox_nom";
-            this.textBox_nom.Size = new System.Drawing.Size(252, 32);
-            this.textBox_nom.TabIndex = 29;
+            this.textBox_identifiant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBox_identifiant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_identifiant.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_identifiant.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox_identifiant.ForeColor = System.Drawing.Color.Brown;
+            this.textBox_identifiant.Location = new System.Drawing.Point(45, 280);
+            this.textBox_identifiant.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox_identifiant.MaxLength = 40;
+            this.textBox_identifiant.Multiline = true;
+            this.textBox_identifiant.Name = "textBox_identifiant";
+            this.textBox_identifiant.Size = new System.Drawing.Size(252, 32);
+            this.textBox_identifiant.TabIndex = 2;
             // 
             // Inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 748);
-            this.Controls.Add(this.textBox_nom);
+            this.Controls.Add(this.textBox_identifiant);
             this.Controls.Add(this.textBox_prenom);
             this.Controls.Add(this.label_prenom);
             this.Controls.Add(this.label_nom);
@@ -285,9 +295,9 @@
             this.Controls.Add(this.label_confirmpassword);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label_password);
-            this.Controls.Add(this.textBox_identifiant);
+            this.Controls.Add(this.textBox_nom);
             this.Controls.Add(this.label_identifiant);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_titre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inscription";
@@ -300,21 +310,21 @@
 
         #endregion
 
-        private Label label_connexion;
-        private Label label_compte;
-        private Button button_effacer;
-        private Button button_inscription;
-        private CheckBox checkBox_affficher;
-        private TextBox textBox_confirmpassword;
-        private Label label_confirmpassword;
-        private TextBox textBox_password;
-        private Label label_password;
-        private TextBox textBox_identifiant;
-        private Label label_identifiant;
-        private Label label1;
-        private Label label_prenom;
+        private Label label_titre;
         private Label label_nom;
-        private TextBox textBox_prenom;
         private TextBox textBox_nom;
+        private Label label_prenom;
+        private TextBox textBox_prenom;
+        private Label label_identifiant;
+        private TextBox textBox_identifiant;
+        private Label label_password;
+        private TextBox textBox_password;
+        private Label label_confirmpassword;
+        private TextBox textBox_confirmpassword;
+        private CheckBox checkBox_affficher;
+        private Button button_inscription;
+        private Label label_connexion;
+        private Button button_effacer;
+        private Label label_compte;
     }
 }

@@ -46,27 +46,54 @@ namespace Pointeuse
 
         private void button_inscription_Click(object sender, EventArgs e)
         {
-
-            DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
-            _connexion.Open();
-
-            DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
-
-            PointeuseContext context = new PointeuseContext(_contextOptions);
-            context.Database.EnsureCreated();
-
-            Users utilisateurInscription = new Users()
+            if (textBox_password.Text.Length <= 5)
             {
-                Nom = textBox_nom.Text,
-                Prenom = textBox_prenom.Text,
-                Password = textBox_password.Text,
-                Identifiant = textBox_identifiant.Text,
-                Service = ""
-            };
-            var users = context.Users.ToList();
-            var booll = context.Users.Add(utilisateurInscription);
-            Console.Write(booll);
-            context.SaveChanges();
+                MessageBox.Show("Le Mot de passe trop petit !");
+            }
+
+            else if (textBox_password.Text != textBox_confirmpassword.Text)
+            {
+                MessageBox.Show("Mot de passe différent");
+            }
+            else
+            {
+                //Ouvrir connexion
+                DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+                _connexion.Open();
+
+                //Utiliser sqlLite
+                DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+
+                //Prendre la page de context
+                PointeuseContext context = new PointeuseContext(_contextOptions);
+                context.Database.EnsureCreated();
+
+                //Attribut les valeurs dans la DB
+                Users utilisateurInscription = new Users()
+                {
+                    Nom = textBox_nom.Text,
+                    Prenom = textBox_prenom.Text,
+                    Identifiant = textBox_identifiant.Text,
+                    Password = textBox_password.Text,
+                    Service = ""
+                };
+
+                context.Users.Add(utilisateurInscription);
+            
+                if (context.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Ok, vous êtes inscrit");
+                    Connexion connexion = new Connexion();
+                    connexion.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Une erreur est survenue");
+                }
+
+                context.SaveChanges();
+            }               
         }
     }
 }
