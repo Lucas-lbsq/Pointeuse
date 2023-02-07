@@ -14,11 +14,11 @@ namespace Pointeuse.Migrations
 
             migrationBuilder.RenameTable(
                 name: "Villes",
-                newName: "Users");
+                newName: "User");
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Users",
-                table: "Users",
+                table: "User",
                 column: "Id");
         }
 
@@ -26,10 +26,10 @@ namespace Pointeuse.Migrations
         {
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Users",
-                table: "Users");
+                table: "User");
 
             migrationBuilder.RenameTable(
-                name: "Users",
+                name: "User",
                 newName: "Villes");
 
             migrationBuilder.AddPrimaryKey(

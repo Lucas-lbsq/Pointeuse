@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Pointeuse.Entités;
 
 namespace Pointeuse.db_contexts
@@ -7,10 +8,16 @@ namespace Pointeuse.db_contexts
     {
         public DbSet<Users> Users { get; set; } = null!;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public PointeuseContext(DbContextOptions<PointeuseContext> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
-            base.OnConfiguring(optionsBuilder);
+            //SaveChanges();
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
     }
 }
