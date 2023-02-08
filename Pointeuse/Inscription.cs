@@ -48,12 +48,12 @@ namespace Pointeuse
         {
             if (textBox_password.Text.Length <= 5)
             {
-                MessageBox.Show("Le Mot de passe trop petit !");
+                MessageBox.Show("Le Mot de passe est trop petit !", "Mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (textBox_password.Text != textBox_confirmpassword.Text)
             {
-                MessageBox.Show("Mot de passe différent");
+                MessageBox.Show("Mot de passe différent", "Mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -82,14 +82,14 @@ namespace Pointeuse
             
                 if (context.SaveChanges() > 0)
                 {
-                    MessageBox.Show("Ok, vous êtes inscrit");
+                    MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Connexion connexion = new Connexion();
                     connexion.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Une erreur est survenue");
+                    MessageBox.Show("Une erreur est survenue", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 context.SaveChanges();
