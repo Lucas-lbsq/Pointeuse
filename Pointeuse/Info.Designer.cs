@@ -50,6 +50,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Details_de_lapplication = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -344,12 +346,38 @@
             this.sidebarTimer.Interval = 20;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(185, 135);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(560, 450);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // Details_de_lapplication
+            // 
+            this.Details_de_lapplication.AutoSize = true;
+            this.Details_de_lapplication.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Details_de_lapplication.Location = new System.Drawing.Point(185, 72);
+            this.Details_de_lapplication.Margin = new System.Windows.Forms.Padding(0);
+            this.Details_de_lapplication.Name = "Details_de_lapplication";
+            this.Details_de_lapplication.Size = new System.Drawing.Size(308, 37);
+            this.Details_de_lapplication.TabIndex = 5;
+            this.Details_de_lapplication.Text = "Détails de l\'application :";
+            // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Details_de_lapplication);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -369,6 +397,7 @@
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -394,5 +423,7 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
+        private TextBox textBox1;
+        private Label Details_de_lapplication;
     }
 }
