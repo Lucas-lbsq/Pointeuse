@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 using Pointeuse.db_contexts;
 using Pointeuse.Entités;
 using static System.Windows.Forms.DataFormats;
@@ -53,7 +54,7 @@ namespace Pointeuse
             this.Hide();
         }
 
-        private void button_connecter_Click(object sender, EventArgs e)
+        private void button_connecter_Click(object sender, EventArgs e, Users user)
         {
             //Ouvrir connexion
             DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
@@ -65,6 +66,18 @@ namespace Pointeuse
             //Prendre la page de context
             PointeuseContext context = new PointeuseContext(_contextOptions);
             context.Database.EnsureCreated();
+
+            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
+            if (userConnexion != null)
+            {
+                // On accepte la connexion
+                MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                //Connexion refusée
+            }
         }
         private bool userTenteConnexion(PointeuseContext context, Users user)
         {
@@ -72,6 +85,7 @@ namespace Pointeuse
             if (userConnexion != null)
             {
                 // On accepte la connexion
+                MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             else

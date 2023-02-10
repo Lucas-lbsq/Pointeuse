@@ -106,7 +106,7 @@ namespace Pointeuse
         }
         private bool userTenteInscription(PointeuseContext context, Users user)
         {
-            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant).First();
+            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant).FirstOrDefault();
             if (userConnexion != null)
             {
                 //Utilisateur avec cet identifiant déjà existant donc pas d'inscription possible

@@ -100,7 +100,6 @@
             this.button_connecter.TabIndex = 30;
             this.button_connecter.Text = "Se connecter";
             this.button_connecter.UseVisualStyleBackColor = false;
-            this.button_connecter.Click += new System.EventHandler(this.button_connecter_Click);
             // 
             // checkBox_effacer
             // 
