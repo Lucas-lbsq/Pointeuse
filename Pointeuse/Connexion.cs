@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using Pointeuse.db_contexts;
+using Pointeuse.Entités;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -22,22 +27,22 @@ namespace Pointeuse
         //Champ mot de passe : ●
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBox_effacer.Checked)
             {
-                textBox2.PasswordChar = '\0';
+                textBox_password.PasswordChar = '\0';
             }
             else
             {
-                textBox2.PasswordChar = '●';
+                textBox_password.PasswordChar = '●';
             }
         }
 
         //Button Effacer
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox1.Focus();
+            textBox_indentifiant.Text = "";
+            textBox_password.Text = "";
+            textBox_indentifiant.Focus();
         }
 
         //Redirection vers Inscription
@@ -48,9 +53,32 @@ namespace Pointeuse
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_connecter_Click(object sender, EventArgs e)
         {
+            //Ouvrir connexion
+            DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+            _connexion.Open();
 
+            //Utiliser sqlLite
+            DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+
+            //Prendre la page de context
+            PointeuseContext context = new PointeuseContext(_contextOptions);
+            context.Database.EnsureCreated();
+        }
+        private bool userTenteConnexion(PointeuseContext context, Users user)
+        {
+            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
+            if (userConnexion != null)
+            {
+                // On accepte la connexion
+                return true;
+            }
+            else
+            {
+                //Connexion refusée
+                return false;
+            }
         }
     }
 }

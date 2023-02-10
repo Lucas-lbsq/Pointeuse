@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Siticone.Desktop.UI.WinForms;
 
 namespace Pointeuse
 {
@@ -21,49 +20,13 @@ namespace Pointeuse
         {
             InitializeComponent();
         }
-        public Parametres(Color fore, Color back):this()
-        {
-            ColorChange(fore);
-            BackColorChange(back);
-        }
 
-        #region Couleur
-        //Changement de couleur SideBar
-        void ColorChange(Color color)
-        {
-            sidebar.BackColor = button2.BackColor = button3.BackColor = button4.BackColor 
-                              = button5.BackColor = button6.BackColor = button7.BackColor = button8.BackColor =
-                sidebar.ForeColor = color;
-            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
-                btn.BackColor = color;
-        }
-        //Prend la couleur du texte du boutton
-        private void btn_CheckedChanged(object sender, EventArgs e)
-        {
-            SiticoneRadioButton button = (SiticoneRadioButton)sender;
-            ColorChange(button.ForeColor);
-        }
-
-        //Changement de coleur du fond d'écran
-        void BackColorChange(Color color)
-        {
-            this.BackColor = color;
-            foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
-                btn.BackColor = color;
-        }
-        //Prend la couleur du texte du boutton
-        private void Backbtn_CheckedChanged(object sender, EventArgs e)
-        {
-            SiticoneRadioButton button = (SiticoneRadioButton)sender;
-            BackColorChange(button.ForeColor);
-        }
-        #endregion
 
         #region SideBar
         //Configurer la SideBar
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
-            //Bouger la SideBar
+            ///Bouger la SideBar
 
             if (sidebarExpand)
             {
@@ -74,8 +37,6 @@ namespace Pointeuse
                     sidebarExpand = false;
                     sidebarTimer.Stop();
                 }
-                foreach (var btn in sidebar.Controls.OfType<SiticoneRadioButton>())
-                    btn.Text = string.Empty;
             }
             else
             {
@@ -99,7 +60,7 @@ namespace Pointeuse
         //Button Accueil
         private void button8_Click(object sender, EventArgs e)
         {
-            Accueil accueil = new Accueil(sidebar.BackColor, this.BackColor, this) ;
+            Accueil accueil = new Accueil();
             accueil.Show();
             this.Hide();
         }

@@ -51,17 +51,17 @@
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_matin = new System.Windows.Forms.Button();
-            this.label_matin = new System.Windows.Forms.Label();
+            this.button_inscription = new System.Windows.Forms.Button();
+            this.label_titre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button_fin_aprem = new System.Windows.Forms.Button();
-            this.label_fin_aprem = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button_aprem = new System.Windows.Forms.Button();
-            this.label_aprem = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button_fin_matin = new System.Windows.Forms.Button();
-            this.label_fin_matin = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -361,116 +361,155 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button_matin);
-            this.groupBox1.Controls.Add(this.label_matin);
-            this.groupBox1.Location = new System.Drawing.Point(144, 84);
+            this.groupBox1.Controls.Add(this.label_titre);
+            this.groupBox1.Controls.Add(this.button_inscription);
+            this.groupBox1.Location = new System.Drawing.Point(171, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 124);
+            this.groupBox1.Size = new System.Drawing.Size(223, 129);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // button_matin
+            // button_inscription
             // 
-            this.button_matin.Location = new System.Drawing.Point(55, 66);
-            this.button_matin.Name = "button_matin";
-            this.button_matin.Size = new System.Drawing.Size(75, 23);
-            this.button_matin.TabIndex = 1;
-            this.button_matin.Text = "Définir";
-            this.button_matin.UseVisualStyleBackColor = true;
-            this.button_matin.Click += new System.EventHandler(this.button_matin_Click);
+            this.button_inscription.BackColor = System.Drawing.Color.Brown;
+            this.button_inscription.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_inscription.FlatAppearance.BorderSize = 0;
+            this.button_inscription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_inscription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_inscription.ForeColor = System.Drawing.Color.White;
+            this.button_inscription.Location = new System.Drawing.Point(51, 62);
+            this.button_inscription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button_inscription.Name = "button_inscription";
+            this.button_inscription.Size = new System.Drawing.Size(132, 41);
+            this.button_inscription.TabIndex = 7;
+            this.button_inscription.Text = "Pointer";
+            this.button_inscription.UseVisualStyleBackColor = false;
             // 
-            // label_matin
+            // label_titre
             // 
-            this.label_matin.AutoSize = true;
-            this.label_matin.Location = new System.Drawing.Point(49, 33);
-            this.label_matin.Name = "label_matin";
-            this.label_matin.Size = new System.Drawing.Size(98, 15);
-            this.label_matin.TabIndex = 0;
-            this.label_matin.Text = "Début de journée";
+            this.label_titre.AutoSize = true;
+            this.label_titre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_titre.ForeColor = System.Drawing.Color.Brown;
+            this.label_titre.Location = new System.Drawing.Point(32, 21);
+            this.label_titre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_titre.Name = "label_titre";
+            this.label_titre.Size = new System.Drawing.Size(160, 25);
+            this.label_titre.TabIndex = 11;
+            this.label_titre.Text = "Début de matiné";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button_fin_aprem);
-            this.groupBox2.Controls.Add(this.label_fin_aprem);
-            this.groupBox2.Location = new System.Drawing.Point(625, 391);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Location = new System.Drawing.Point(601, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 124);
+            this.groupBox2.Size = new System.Drawing.Size(223, 129);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // button_fin_aprem
+            // label2
             // 
-            this.button_fin_aprem.Location = new System.Drawing.Point(55, 66);
-            this.button_fin_aprem.Name = "button_fin_aprem";
-            this.button_fin_aprem.Size = new System.Drawing.Size(75, 23);
-            this.button_fin_aprem.TabIndex = 1;
-            this.button_fin_aprem.Text = "Définir";
-            this.button_fin_aprem.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Brown;
+            this.label2.Location = new System.Drawing.Point(32, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Fin de matiné";
             // 
-            // label_fin_aprem
+            // button9
             // 
-            this.label_fin_aprem.AutoSize = true;
-            this.label_fin_aprem.Location = new System.Drawing.Point(49, 33);
-            this.label_fin_aprem.Name = "label_fin_aprem";
-            this.label_fin_aprem.Size = new System.Drawing.Size(82, 15);
-            this.label_fin_aprem.TabIndex = 0;
-            this.label_fin_aprem.Text = "Fin de journée";
+            this.button9.BackColor = System.Drawing.Color.Brown;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(51, 62);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(132, 41);
+            this.button9.TabIndex = 7;
+            this.button9.Text = "Pointer";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button_aprem);
-            this.groupBox3.Controls.Add(this.label_aprem);
-            this.groupBox3.Location = new System.Drawing.Point(144, 391);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Location = new System.Drawing.Point(171, 320);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 124);
-            this.groupBox3.TabIndex = 3;
+            this.groupBox3.Size = new System.Drawing.Size(223, 129);
+            this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
-            // button_aprem
+            // label3
             // 
-            this.button_aprem.Location = new System.Drawing.Point(55, 66);
-            this.button_aprem.Name = "button_aprem";
-            this.button_aprem.Size = new System.Drawing.Size(75, 23);
-            this.button_aprem.TabIndex = 1;
-            this.button_aprem.Text = "Définir";
-            this.button_aprem.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Brown;
+            this.label3.Location = new System.Drawing.Point(32, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Début d\'après-midi";
             // 
-            // label_aprem
+            // button10
             // 
-            this.label_aprem.AutoSize = true;
-            this.label_aprem.Location = new System.Drawing.Point(49, 33);
-            this.label_aprem.Name = "label_aprem";
-            this.label_aprem.Size = new System.Drawing.Size(109, 15);
-            this.label_aprem.TabIndex = 0;
-            this.label_aprem.Text = "Début d\'après-midi";
+            this.button10.BackColor = System.Drawing.Color.Brown;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(51, 62);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(132, 41);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Pointer";
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button_fin_matin);
-            this.groupBox4.Controls.Add(this.label_fin_matin);
-            this.groupBox4.Location = new System.Drawing.Point(625, 92);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.button11);
+            this.groupBox4.Location = new System.Drawing.Point(601, 320);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 124);
-            this.groupBox4.TabIndex = 3;
+            this.groupBox4.Size = new System.Drawing.Size(223, 129);
+            this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             // 
-            // button_fin_matin
+            // label4
             // 
-            this.button_fin_matin.Location = new System.Drawing.Point(55, 66);
-            this.button_fin_matin.Name = "button_fin_matin";
-            this.button_fin_matin.Size = new System.Drawing.Size(75, 23);
-            this.button_fin_matin.TabIndex = 1;
-            this.button_fin_matin.Text = "Définir";
-            this.button_fin_matin.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Brown;
+            this.label4.Location = new System.Drawing.Point(32, 21);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Fin d\'après-midi";
             // 
-            // label_fin_matin
+            // button11
             // 
-            this.label_fin_matin.AutoSize = true;
-            this.label_fin_matin.Location = new System.Drawing.Point(49, 33);
-            this.label_fin_matin.Name = "label_fin_matin";
-            this.label_fin_matin.Size = new System.Drawing.Size(85, 15);
-            this.label_fin_matin.TabIndex = 0;
-            this.label_fin_matin.Text = "Fin de matinée";
+            this.button11.BackColor = System.Drawing.Color.Brown;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(51, 62);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(132, 41);
+            this.button11.TabIndex = 7;
+            this.button11.Text = "Pointer";
+            this.button11.UseVisualStyleBackColor = false;
             // 
             // Pointages
             // 
@@ -478,8 +517,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.sidebar);
@@ -535,16 +574,16 @@
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
         private GroupBox groupBox1;
-        private Button button_matin;
-        private Label label_matin;
+        private Button button_inscription;
+        private Label label_titre;
         private GroupBox groupBox2;
-        private Button button_fin_aprem;
-        private Label label_fin_aprem;
+        private Label label2;
+        private Button button9;
         private GroupBox groupBox3;
-        private Button button_aprem;
-        private Label label_aprem;
+        private Label label3;
+        private Button button10;
         private GroupBox groupBox4;
-        private Button button_fin_matin;
-        private Label label_fin_matin;
+        private Label label4;
+        private Button button11;
     }
 }

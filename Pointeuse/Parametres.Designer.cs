@@ -52,23 +52,12 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.label_bonjour = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.siticoneRadioButton2 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton3 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton4 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton5 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton6 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton7 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
+
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.siticoneRadioButton1 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
+
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.siticoneRadioButton8 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
+
             this.label3 = new System.Windows.Forms.Label();
-            this.siticoneRadioButton9 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton10 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton11 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton12 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton13 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
-            this.siticoneRadioButton14 = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -385,219 +374,30 @@
             this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 9;
             this.label2.Text = "Theme SideBar :";
-            // 
-            // siticoneRadioButton2
-            // 
-            this.siticoneRadioButton2.AutoSize = true;
-            this.siticoneRadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton2.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton2.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton2.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton2.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton2.Location = new System.Drawing.Point(142, 82);
-            this.siticoneRadioButton2.Name = "siticoneRadioButton2";
-            this.siticoneRadioButton2.Size = new System.Drawing.Size(63, 21);
-            this.siticoneRadioButton2.TabIndex = 12;
-            this.siticoneRadioButton2.Text = "Violet";
-            this.siticoneRadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton2.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton2.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
-            // siticoneRadioButton3
-            // 
-            this.siticoneRadioButton3.AutoSize = true;
-            this.siticoneRadioButton3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton3.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton3.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton3.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton3.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton3.Location = new System.Drawing.Point(142, 111);
-            this.siticoneRadioButton3.Name = "siticoneRadioButton3";
-            this.siticoneRadioButton3.Size = new System.Drawing.Size(53, 21);
-            this.siticoneRadioButton3.TabIndex = 13;
-            this.siticoneRadioButton3.Text = "Vert";
-            this.siticoneRadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton3.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton3.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
-            // siticoneRadioButton4
-            // 
-            this.siticoneRadioButton4.AutoSize = true;
-            this.siticoneRadioButton4.CheckedState.BorderColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton4.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton4.CheckedState.FillColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton4.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton4.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton4.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton4.ForeColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton4.Location = new System.Drawing.Point(142, 140);
-            this.siticoneRadioButton4.Name = "siticoneRadioButton4";
-            this.siticoneRadioButton4.Size = new System.Drawing.Size(74, 21);
-            this.siticoneRadioButton4.TabIndex = 14;
-            this.siticoneRadioButton4.Text = "Marron";
-            this.siticoneRadioButton4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton4.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton4.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
-            // siticoneRadioButton5
-            // 
-            this.siticoneRadioButton5.AutoSize = true;
-            this.siticoneRadioButton5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton5.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton5.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton5.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton5.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton5.Location = new System.Drawing.Point(142, 169);
-            this.siticoneRadioButton5.Name = "siticoneRadioButton5";
-            this.siticoneRadioButton5.Size = new System.Drawing.Size(54, 21);
-            this.siticoneRadioButton5.TabIndex = 15;
-            this.siticoneRadioButton5.Text = "Bleu";
-            this.siticoneRadioButton5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton5.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton5.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton5.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton5.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
-            // siticoneRadioButton6
-            // 
-            this.siticoneRadioButton6.AutoSize = true;
-            this.siticoneRadioButton6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siticoneRadioButton6.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siticoneRadioButton6.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton6.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton6.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton6.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siticoneRadioButton6.Location = new System.Drawing.Point(142, 24);
-            this.siticoneRadioButton6.Name = "siticoneRadioButton6";
-            this.siticoneRadioButton6.Size = new System.Drawing.Size(97, 21);
-            this.siticoneRadioButton6.TabIndex = 16;
-            this.siticoneRadioButton6.Text = "Par default";
-            this.siticoneRadioButton6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton6.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton6.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton6.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton6.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
-            // siticoneRadioButton7
-            // 
-            this.siticoneRadioButton7.AutoSize = true;
-            this.siticoneRadioButton7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton7.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton7.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton7.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton7.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton7.Location = new System.Drawing.Point(142, 198);
-            this.siticoneRadioButton7.Name = "siticoneRadioButton7";
-            this.siticoneRadioButton7.Size = new System.Drawing.Size(55, 21);
-            this.siticoneRadioButton7.TabIndex = 17;
-            this.siticoneRadioButton7.Text = "Noir";
-            this.siticoneRadioButton7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton7.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton7.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton7.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton7.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
-            // 
+            //
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.Controls.Add(this.siticoneRadioButton1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton7);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton2);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton6);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton3);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton5);
-            this.groupBox1.Controls.Add(this.siticoneRadioButton4);
             this.groupBox1.Location = new System.Drawing.Point(193, 122);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 233);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Theme";
-            // 
-            // siticoneRadioButton1
-            // 
-            this.siticoneRadioButton1.AutoSize = true;
-            this.siticoneRadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton1.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton1.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton1.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton1.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton1.Location = new System.Drawing.Point(142, 53);
-            this.siticoneRadioButton1.Name = "siticoneRadioButton1";
-            this.siticoneRadioButton1.Size = new System.Drawing.Size(72, 21);
-            this.siticoneRadioButton1.TabIndex = 18;
-            this.siticoneRadioButton1.Text = "Orange";
-            this.siticoneRadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton1.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton1.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
+            
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Silver;
-            this.groupBox2.Controls.Add(this.siticoneRadioButton8);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton9);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton10);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton11);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton12);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton13);
-            this.groupBox2.Controls.Add(this.siticoneRadioButton14);
             this.groupBox2.Location = new System.Drawing.Point(464, 122);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(324, 233);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Theme";
-            // 
-            // siticoneRadioButton8
-            // 
-            this.siticoneRadioButton8.AutoSize = true;
-            this.siticoneRadioButton8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton8.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton8.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton8.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton8.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton8.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton8.Location = new System.Drawing.Point(169, 55);
-            this.siticoneRadioButton8.Name = "siticoneRadioButton8";
-            this.siticoneRadioButton8.Size = new System.Drawing.Size(72, 21);
-            this.siticoneRadioButton8.TabIndex = 19;
-            this.siticoneRadioButton8.Text = "Orange";
-            this.siticoneRadioButton8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton8.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton8.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton8.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton8.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
+            
             // label3
             // 
             this.label3.AutoSize = true;
@@ -607,138 +407,7 @@
             this.label3.Size = new System.Drawing.Size(159, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Theme Arrière-Plan :";
-            // 
-            // siticoneRadioButton9
-            // 
-            this.siticoneRadioButton9.AutoSize = true;
-            this.siticoneRadioButton9.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton9.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton9.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton9.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton9.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.siticoneRadioButton9.Location = new System.Drawing.Point(169, 198);
-            this.siticoneRadioButton9.Name = "siticoneRadioButton9";
-            this.siticoneRadioButton9.Size = new System.Drawing.Size(55, 21);
-            this.siticoneRadioButton9.TabIndex = 17;
-            this.siticoneRadioButton9.Text = "Noir";
-            this.siticoneRadioButton9.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton9.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton9.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton9.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton9.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
-            // siticoneRadioButton10
-            // 
-            this.siticoneRadioButton10.AutoSize = true;
-            this.siticoneRadioButton10.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton10.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton10.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton10.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton10.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton10.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(235)))));
-            this.siticoneRadioButton10.Location = new System.Drawing.Point(169, 82);
-            this.siticoneRadioButton10.Name = "siticoneRadioButton10";
-            this.siticoneRadioButton10.Size = new System.Drawing.Size(63, 21);
-            this.siticoneRadioButton10.TabIndex = 12;
-            this.siticoneRadioButton10.Text = "Violet";
-            this.siticoneRadioButton10.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton10.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton10.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton10.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton10.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
-            // siticoneRadioButton11
-            // 
-            this.siticoneRadioButton11.AutoSize = true;
-            this.siticoneRadioButton11.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siticoneRadioButton11.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton11.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.siticoneRadioButton11.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton11.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton11.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton11.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton11.Location = new System.Drawing.Point(169, 24);
-            this.siticoneRadioButton11.Name = "siticoneRadioButton11";
-            this.siticoneRadioButton11.Size = new System.Drawing.Size(97, 21);
-            this.siticoneRadioButton11.TabIndex = 16;
-            this.siticoneRadioButton11.Text = "Par default";
-            this.siticoneRadioButton11.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton11.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton11.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton11.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton11.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
-            // siticoneRadioButton12
-            // 
-            this.siticoneRadioButton12.AutoSize = true;
-            this.siticoneRadioButton12.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton12.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton12.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton12.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton12.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton12.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton12.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(129)))), ((int)(((byte)(131)))));
-            this.siticoneRadioButton12.Location = new System.Drawing.Point(169, 111);
-            this.siticoneRadioButton12.Name = "siticoneRadioButton12";
-            this.siticoneRadioButton12.Size = new System.Drawing.Size(53, 21);
-            this.siticoneRadioButton12.TabIndex = 13;
-            this.siticoneRadioButton12.Text = "Vert";
-            this.siticoneRadioButton12.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton12.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton12.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton12.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton12.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
-            // siticoneRadioButton13
-            // 
-            this.siticoneRadioButton13.AutoSize = true;
-            this.siticoneRadioButton13.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton13.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton13.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton13.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton13.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton13.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton13.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.siticoneRadioButton13.Location = new System.Drawing.Point(169, 169);
-            this.siticoneRadioButton13.Name = "siticoneRadioButton13";
-            this.siticoneRadioButton13.Size = new System.Drawing.Size(54, 21);
-            this.siticoneRadioButton13.TabIndex = 15;
-            this.siticoneRadioButton13.Text = "Bleu";
-            this.siticoneRadioButton13.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton13.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton13.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton13.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton13.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
-            // 
-            // siticoneRadioButton14
-            // 
-            this.siticoneRadioButton14.AutoSize = true;
-            this.siticoneRadioButton14.CheckedState.BorderColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton14.CheckedState.BorderThickness = 0;
-            this.siticoneRadioButton14.CheckedState.FillColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton14.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.siticoneRadioButton14.CheckedState.InnerOffset = -4;
-            this.siticoneRadioButton14.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(139)))), ((int)(((byte)(38)))));
-            this.siticoneRadioButton14.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.siticoneRadioButton14.ForeColor = System.Drawing.Color.Brown;
-            this.siticoneRadioButton14.Location = new System.Drawing.Point(169, 140);
-            this.siticoneRadioButton14.Name = "siticoneRadioButton14";
-            this.siticoneRadioButton14.Size = new System.Drawing.Size(74, 21);
-            this.siticoneRadioButton14.TabIndex = 14;
-            this.siticoneRadioButton14.Text = "Marron";
-            this.siticoneRadioButton14.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.siticoneRadioButton14.UncheckedState.BorderThickness = 2;
-            this.siticoneRadioButton14.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton14.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.siticoneRadioButton14.CheckedChanged += new System.EventHandler(this.Backbtn_CheckedChanged);
+            
             // 
             // Parametres
             // 
@@ -800,25 +469,10 @@
         private System.Windows.Forms.Timer sidebarTimer;
         private Label label_bonjour;
         private Button button9;
-        private Siticone.Desktop.UI.WinForms.SiticoneWinProgressIndicator siticoneWinProgressIndicator1;
         private ComboBox comboBox1;
         private Label label2;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton2;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton3;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton4;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton5;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton6;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton7;
         private GroupBox groupBox1;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton1;
         private GroupBox groupBox2;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton8;
         private Label label3;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton9;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton10;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton11;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton12;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton13;
-        private Siticone.Desktop.UI.WinForms.SiticoneRadioButton siticoneRadioButton14;
     }
 }

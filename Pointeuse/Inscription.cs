@@ -80,23 +80,48 @@ namespace Pointeuse
                     Password = textBox_password.Text,
                     Service = ""
                 };
-
-                context.Users.Add(utilisateurInscription);
-            
-                if (context.SaveChanges() > 0)
+                if (userTenteInscription(context, utilisateurInscription))
                 {
-                    MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Connexion connexion = new Connexion();
-                    connexion.Show();
-                    this.Hide();
+                    context.Users.Add(utilisateurInscription);
+                    if (context.SaveChanges() > 0)
+                    {
+                        MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Connexion connexion = new Connexion();
+                        connexion.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur est survenue", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Une erreur est survenue", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Utilisateur déjà existant", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 context.SaveChanges();
-            }               
+            }         
+            
+        }
+        private bool userTenteInscription(PointeuseContext context, Users user)
+        {
+            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant).First();
+            if (userConnexion != null)
+            {
+                //Utilisateur avec cet identifiant déjà existant donc pas d'inscription possible
+                MessageBox.Show("Utilisateur déjà existant", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                //Utilisateur avec cet identifiant inexistant, donc on valide l'inscription
+                MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
         }
     }
 }
+
+
+
