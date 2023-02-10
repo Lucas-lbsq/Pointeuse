@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Migrations
+/Pointeuse/db contexts/PointeuseContext.cs
+/Pointeuse/Entités/User.cs

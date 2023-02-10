@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Pointeuse
+﻿namespace Pointeuse
 {
     public partial class Pointages : Form
     {
@@ -18,7 +8,6 @@ namespace Pointeuse
             InitializeComponent();
         }
 
-        #region SideBar
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             //Bouger la SideBar
@@ -43,9 +32,7 @@ namespace Pointeuse
                 }
             }
         }
-        #endregion
 
-        #region Redirection boutton
         private void menuButton_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
@@ -92,6 +79,10 @@ namespace Pointeuse
             info.Show();
             this.Hide();
         }
-        #endregion
+
+        private void button_matin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

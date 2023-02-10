@@ -50,8 +50,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.Details_de_lapplication = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Details_de_lapplication = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -339,34 +339,36 @@
             this.button7.Text = "            Info";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 20;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // Details_de_lapplication
-            // 
-            this.Details_de_lapplication.AutoSize = true;
-            this.Details_de_lapplication.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Details_de_lapplication.Location = new System.Drawing.Point(121, 58);
-            this.Details_de_lapplication.Margin = new System.Windows.Forms.Padding(0);
-            this.Details_de_lapplication.Name = "Details_de_lapplication";
-            this.Details_de_lapplication.Size = new System.Drawing.Size(308, 37);
-            this.Details_de_lapplication.TabIndex = 3;
-            this.Details_de_lapplication.Text = "Détails de l\'application :";
-            // 
             // textBox1
             // 
             this.textBox1.AcceptsReturn = true;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(121, 121);
+            this.textBox1.Location = new System.Drawing.Point(185, 135);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(560, 450);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 6;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // Details_de_lapplication
+            // 
+            this.Details_de_lapplication.AutoSize = true;
+            this.Details_de_lapplication.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Details_de_lapplication.Location = new System.Drawing.Point(185, 72);
+            this.Details_de_lapplication.Margin = new System.Windows.Forms.Padding(0);
+            this.Details_de_lapplication.Name = "Details_de_lapplication";
+            this.Details_de_lapplication.Size = new System.Drawing.Size(308, 37);
+            this.Details_de_lapplication.TabIndex = 5;
+            this.Details_de_lapplication.Text = "Détails de l\'application :";
             // 
             // Info
             // 
@@ -421,7 +423,7 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
-        private Label Details_de_lapplication;
         private TextBox textBox1;
+        private Label Details_de_lapplication;
     }
 }
