@@ -50,6 +50,18 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_matin = new System.Windows.Forms.Button();
+            this.label_matin = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_fin_aprem = new System.Windows.Forms.Button();
+            this.label_fin_aprem = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button_aprem = new System.Windows.Forms.Button();
+            this.label_aprem = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button_fin_matin = new System.Windows.Forms.Button();
+            this.label_fin_matin = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -60,6 +72,10 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -343,12 +359,129 @@
             this.sidebarTimer.Interval = 20;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button_matin);
+            this.groupBox1.Controls.Add(this.label_matin);
+            this.groupBox1.Location = new System.Drawing.Point(144, 84);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 124);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // button_matin
+            // 
+            this.button_matin.Location = new System.Drawing.Point(55, 66);
+            this.button_matin.Name = "button_matin";
+            this.button_matin.Size = new System.Drawing.Size(75, 23);
+            this.button_matin.TabIndex = 1;
+            this.button_matin.Text = "Définir";
+            this.button_matin.UseVisualStyleBackColor = true;
+            this.button_matin.Click += new System.EventHandler(this.button_matin_Click);
+            // 
+            // label_matin
+            // 
+            this.label_matin.AutoSize = true;
+            this.label_matin.Location = new System.Drawing.Point(49, 33);
+            this.label_matin.Name = "label_matin";
+            this.label_matin.Size = new System.Drawing.Size(98, 15);
+            this.label_matin.TabIndex = 0;
+            this.label_matin.Text = "Début de journée";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button_fin_aprem);
+            this.groupBox2.Controls.Add(this.label_fin_aprem);
+            this.groupBox2.Location = new System.Drawing.Point(625, 391);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 124);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // button_fin_aprem
+            // 
+            this.button_fin_aprem.Location = new System.Drawing.Point(55, 66);
+            this.button_fin_aprem.Name = "button_fin_aprem";
+            this.button_fin_aprem.Size = new System.Drawing.Size(75, 23);
+            this.button_fin_aprem.TabIndex = 1;
+            this.button_fin_aprem.Text = "Définir";
+            this.button_fin_aprem.UseVisualStyleBackColor = true;
+            // 
+            // label_fin_aprem
+            // 
+            this.label_fin_aprem.AutoSize = true;
+            this.label_fin_aprem.Location = new System.Drawing.Point(49, 33);
+            this.label_fin_aprem.Name = "label_fin_aprem";
+            this.label_fin_aprem.Size = new System.Drawing.Size(82, 15);
+            this.label_fin_aprem.TabIndex = 0;
+            this.label_fin_aprem.Text = "Fin de journée";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button_aprem);
+            this.groupBox3.Controls.Add(this.label_aprem);
+            this.groupBox3.Location = new System.Drawing.Point(144, 391);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 124);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            // 
+            // button_aprem
+            // 
+            this.button_aprem.Location = new System.Drawing.Point(55, 66);
+            this.button_aprem.Name = "button_aprem";
+            this.button_aprem.Size = new System.Drawing.Size(75, 23);
+            this.button_aprem.TabIndex = 1;
+            this.button_aprem.Text = "Définir";
+            this.button_aprem.UseVisualStyleBackColor = true;
+            // 
+            // label_aprem
+            // 
+            this.label_aprem.AutoSize = true;
+            this.label_aprem.Location = new System.Drawing.Point(49, 33);
+            this.label_aprem.Name = "label_aprem";
+            this.label_aprem.Size = new System.Drawing.Size(109, 15);
+            this.label_aprem.TabIndex = 0;
+            this.label_aprem.Text = "Début d\'après-midi";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button_fin_matin);
+            this.groupBox4.Controls.Add(this.label_fin_matin);
+            this.groupBox4.Location = new System.Drawing.Point(625, 92);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 124);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            // 
+            // button_fin_matin
+            // 
+            this.button_fin_matin.Location = new System.Drawing.Point(55, 66);
+            this.button_fin_matin.Name = "button_fin_matin";
+            this.button_fin_matin.Size = new System.Drawing.Size(75, 23);
+            this.button_fin_matin.TabIndex = 1;
+            this.button_fin_matin.Text = "Définir";
+            this.button_fin_matin.UseVisualStyleBackColor = true;
+            // 
+            // label_fin_matin
+            // 
+            this.label_fin_matin.AutoSize = true;
+            this.label_fin_matin.Location = new System.Drawing.Point(49, 33);
+            this.label_fin_matin.Name = "label_fin_matin";
+            this.label_fin_matin.Size = new System.Drawing.Size(85, 15);
+            this.label_fin_matin.TabIndex = 0;
+            this.label_fin_matin.Text = "Fin de matinée";
+            // 
             // Pointages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -367,6 +500,14 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -393,5 +534,17 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
+        private GroupBox groupBox1;
+        private Button button_matin;
+        private Label label_matin;
+        private GroupBox groupBox2;
+        private Button button_fin_aprem;
+        private Label label_fin_aprem;
+        private GroupBox groupBox3;
+        private Button button_aprem;
+        private Label label_aprem;
+        private GroupBox groupBox4;
+        private Button button_fin_matin;
+        private Label label_fin_matin;
     }
 }
