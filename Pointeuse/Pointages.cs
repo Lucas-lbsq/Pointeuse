@@ -82,7 +82,22 @@
 
         private void button_matin_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Bonne matinée, le pointage a bien été pris en compte");
+        }
 
+        private void button_midi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bon appétit, le pointage a bien été pris en compte");
+        }
+
+        private void button_apres_midi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bonne après midi, le pointage a bien été pris en compte");
+        }
+
+        private void button_soir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bonne soirée, le pointage a bien été pris en compte");
         }
     }
 }

@@ -8,6 +8,8 @@ namespace Pointeuse.db_contexts
     {
         public DbSet<Users> Users { get; set; } = null!;
 
+        public DbSet<Pointage> Pointages { get; set; } = null!;
+
         public PointeuseContext(DbContextOptions<PointeuseContext> options)
             : base(options)
         {
