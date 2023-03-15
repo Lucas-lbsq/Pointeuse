@@ -12,21 +12,27 @@ namespace Pointeuse.db_contexts
 
         public DbSet<DetailUser> DetailUser { get; set; } = null!;
 
+        public bool dansAppli;
+
         public PointeuseContext()
         {
 
         }
 
-        public PointeuseContext(DbContextOptions<PointeuseContext> options)
+        public PointeuseContext(DbContextOptions<PointeuseContext> options, bool dansAppli)
             : base(options)
         {
+            this.dansAppli = dansAppli;
             //SaveChanges();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
-            base.OnConfiguring(optionsBuilder);
+            if(!dansAppli)
+            {
+                optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
+                base.OnConfiguring(optionsBuilder);
+            }
         }
     }
 }

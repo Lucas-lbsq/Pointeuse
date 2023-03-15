@@ -47,15 +47,15 @@ namespace Pointeuse
 
         private void button_connecter_Click(object sender, EventArgs e, Entités.User user)
         {
-            //Ouvrir connexion
-            DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
-            _connexion.Open();
+        //    //Ouvrir connexion
+        //    DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+        //    _connexion.Open();
 
-            //Utiliser sqlLite
-            DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+        //    //Utiliser sqlLite
+        //    DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
 
             //Prendre la page de context
-            PointeuseContext context = new PointeuseContext(_contextOptions);
+            PointeuseContext context = new PointeuseContext();
             context.Database.EnsureCreated();
 
             var userConnexion = context.User.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();

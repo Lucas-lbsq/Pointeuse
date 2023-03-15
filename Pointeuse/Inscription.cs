@@ -60,7 +60,7 @@ namespace Pointeuse
             }
             else
             {
-                //Ouvrir connexion
+                ////Ouvrir connexion
                 DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
                 _connexion.Open();
 
@@ -68,7 +68,7 @@ namespace Pointeuse
                 DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
 
                 //Prendre la page de context
-                PointeuseContext context = new PointeuseContext(_contextOptions);
+                PointeuseContext context = new PointeuseContext(_contextOptions, true);
                 context.Database.EnsureCreated();
 
                 //Attribut les valeurs dans la DB
