@@ -9,18 +9,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using System.Data.Common;
+using Microsoft.Data.Sqlite;
+using Pointeuse.db_contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pointeuse
 {
 
     public partial class Accueil : Form
     {
+        private readonly PointeuseContext _context;
         bool sidebarExpand;
         Form gFormAppelante;
 
         public Accueil()
         {
+
+            ////Ouvrir connexion
+            DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+            _connexion.Open();
+
+            //Utiliser sqlLite
+            DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+
+            //Prendre la page de context
+            _context = new PointeuseContext(_contextOptions, true);
+            _context.Database.EnsureCreated();
             InitializeComponent();
         }
 
@@ -88,7 +103,7 @@ namespace Pointeuse
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Compte compte = new Compte();
+            Compte compte = new Compte(_context);
             compte.Show();
             this.Hide();
         }
@@ -102,7 +117,7 @@ namespace Pointeuse
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Info info = new Info();
+            Info info = new Info(_context);
             info.Show();
             this.Hide();
         }

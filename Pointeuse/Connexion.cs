@@ -11,6 +11,12 @@ namespace Pointeuse
 {
     public partial class Connexion : Form
     {
+        private readonly PointeuseContext _context;
+        public Connexion(PointeuseContext context)
+        {
+            this._context = context;
+            InitializeComponent();
+        }
         public Connexion()
         {
             InitializeComponent();
@@ -40,19 +46,19 @@ namespace Pointeuse
         //Redirection vers Inscription
         private void label6_Click(object sender, EventArgs e)
         {
-            Inscription inscription = new Inscription();
+            Inscription inscription = new Inscription(_context);
             inscription.Show();
             this.Hide();
         }
 
         private void button_connecter_Click(object sender, EventArgs e, Entités.User user)
         {
-        //    //Ouvrir connexion
-        //    DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
-        //    _connexion.Open();
+            ////Ouvrir connexion
+            //DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
+            //_connexion.Open();
 
-        //    //Utiliser sqlLite
-        //    DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
+            ////Utiliser sqlLite
+            //DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
 
             //Prendre la page de context
             PointeuseContext context = new PointeuseContext();

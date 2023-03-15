@@ -8,8 +8,11 @@ namespace Pointeuse
 {
     public partial class Inscription : Form
     {
-        public Inscription()
+        private readonly PointeuseContext _context;
+
+        public Inscription(PointeuseContext context)
         {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
             InitializeComponent();
         }
 
@@ -60,17 +63,6 @@ namespace Pointeuse
             }
             else
             {
-                ////Ouvrir connexion
-                DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
-                _connexion.Open();
-
-                //Utiliser sqlLite
-                DbContextOptions<PointeuseContext> _contextOptions = new DbContextOptionsBuilder<PointeuseContext>().UseSqlite(_connexion).Options;
-
-                //Prendre la page de context
-                PointeuseContext context = new PointeuseContext(_contextOptions, true);
-                context.Database.EnsureCreated();
-
                 //Attribut les valeurs dans la DB
                 User utilisateurInscription = new User()
                 {
@@ -80,10 +72,10 @@ namespace Pointeuse
                     Password = textBox_password.Text,
                     Service = ""
                 };
-                if (userTenteInscription(context, utilisateurInscription))
+                if (userTenteInscription(_context, utilisateurInscription))
                 {
-                    context.User.Add(utilisateurInscription);
-                    if (context.SaveChanges() > 0)
+                    _context.User.Add(utilisateurInscription);
+                    if (_context.SaveChanges() > 0)
                     {
                         MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Connexion connexion = new Connexion();
@@ -100,7 +92,7 @@ namespace Pointeuse
                     MessageBox.Show("Utilisateur déjà existant", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                context.SaveChanges();
+                _context.SaveChanges();
             }         
             
         }

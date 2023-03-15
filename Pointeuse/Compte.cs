@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pointeuse.db_contexts;
 
 namespace Pointeuse
 {
     public partial class Compte : Form
     {
+        private readonly PointeuseContext _context;
         bool sidebarExpand;
 
         public Compte()
         {
+            InitializeComponent();
+        }
+
+        public Compte(PointeuseContext context)
+        {
+            this._context = context;
             InitializeComponent();
         }
 
@@ -96,7 +104,7 @@ namespace Pointeuse
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Inscription inscription = new Inscription();
+            Inscription inscription = new Inscription(_context);
             inscription.Show();
             this.Hide();
         }

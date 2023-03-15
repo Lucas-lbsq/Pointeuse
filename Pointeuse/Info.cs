@@ -9,15 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-
+using Pointeuse.db_contexts;
 
 namespace Pointeuse
 {
     public partial class Info : Form
     {
+        private readonly PointeuseContext _context;
         bool sidebarExpand;
         Form gFormAppelante;
+
+        public Info(PointeuseContext context)
+        {
+            this._context = context;
+            InitializeComponent();
+
+        }
 
         public Info()
         {
@@ -85,7 +92,7 @@ namespace Pointeuse
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Compte compte = new Compte();
+            Compte compte = new Compte(_context);
             compte.Show();
             this.Hide();
         }
