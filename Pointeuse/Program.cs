@@ -1,8 +1,3 @@
-using Microsoft.VisualBasic.ApplicationServices;
-using Pointeuse;
-using Pointeuse.db_contexts;
-
-
 namespace Pointeuse
 
 {

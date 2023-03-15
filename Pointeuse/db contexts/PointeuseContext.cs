@@ -10,16 +10,23 @@ namespace Pointeuse.db_contexts
 
         public DbSet<Pointage> Pointage { get; set; } = null!;
 
+        public DbSet<DetailUser> DetailUser { get; set; } = null!;
+
+        public PointeuseContext()
+        {
+
+        }
+
         public PointeuseContext(DbContextOptions<PointeuseContext> options)
             : base(options)
         {
             //SaveChanges();
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
-        //    base.OnConfiguring(optionsBuilder);
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }
