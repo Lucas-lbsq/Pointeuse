@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.ApplicationServices;
 using Pointeuse.db_contexts;
 using Pointeuse.Entités;
-using static System.Windows.Forms.DataFormats;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Entités = Pointeuse.Entités;
 
 namespace Pointeuse
 {
@@ -54,7 +45,7 @@ namespace Pointeuse
             this.Hide();
         }
 
-        private void button_connecter_Click(object sender, EventArgs e, Users user)
+        private void button_connecter_Click(object sender, EventArgs e, Entités.User user)
         {
             //Ouvrir connexion
             DbConnection _connexion = new SqliteConnection("Data Source=../../../Pointeuse.db");
@@ -67,7 +58,7 @@ namespace Pointeuse
             PointeuseContext context = new PointeuseContext(_contextOptions);
             context.Database.EnsureCreated();
 
-            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
+            var userConnexion = context.User.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
             if (userConnexion != null)
             {
                 // On accepte la connexion
@@ -79,9 +70,9 @@ namespace Pointeuse
                 //Connexion refusée
             }
         }
-        private bool userTenteConnexion(PointeuseContext context, Users user)
+        private bool userTenteConnexion(PointeuseContext context, Entités.User user)
         {
-            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
+            var userConnexion = context.User.Where(u => u.Identifiant == user.Identifiant && u.Password == user.Password).First();
             if (userConnexion != null)
             {
                 // On accepte la connexion

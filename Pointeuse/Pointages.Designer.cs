@@ -1,4 +1,6 @@
-﻿namespace Pointeuse
+﻿using Pointeuse.Class;
+
+namespace Pointeuse
 {
     partial class Pointages
     {
@@ -63,6 +65,9 @@
             this.groupBox_matin = new System.Windows.Forms.GroupBox();
             this.label_matin = new System.Windows.Forms.Label();
             this.button_matin = new System.Windows.Forms.Button();
+            this.progressBar_temp = new Pointeuse.Class.NewProgressBar();
+            this.timer_ProgressBar = new System.Windows.Forms.Timer(this.components);
+            this.label_heure = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -530,12 +535,39 @@
             this.button_matin.UseVisualStyleBackColor = false;
             this.button_matin.Click += new System.EventHandler(this.button_matin_Click);
             // 
+            // progressBar_temp
+            // 
+            this.progressBar_temp.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.progressBar_temp.Location = new System.Drawing.Point(231, 555);
+            this.progressBar_temp.Name = "progressBar_temp";
+            this.progressBar_temp.Size = new System.Drawing.Size(503, 23);
+            this.progressBar_temp.TabIndex = 14;
+            this.progressBar_temp.Click += new System.EventHandler(this.progressBar_temp_Click);
+            // 
+            // timer_ProgressBar
+            // 
+            this.timer_ProgressBar.Tick += new System.EventHandler(this.timer_ProgressBar_Tick);
+            // 
+            // label_heure
+            // 
+            this.label_heure.AutoSize = true;
+            this.label_heure.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_heure.ForeColor = System.Drawing.Color.Brown;
+            this.label_heure.Location = new System.Drawing.Point(231, 527);
+            this.label_heure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_heure.Name = "label_heure";
+            this.label_heure.Size = new System.Drawing.Size(67, 25);
+            this.label_heure.TabIndex = 12;
+            this.label_heure.Text = "Heure";
+            // 
             // Pointages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.label_heure);
+            this.Controls.Add(this.progressBar_temp);
             this.Controls.Add(this.groupBox_pointages);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.Color.Black;
@@ -544,6 +576,7 @@
             this.Name = "Pointages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pointages";
+            this.Load += new System.EventHandler(this.Pointages_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -565,6 +598,7 @@
             this.groupBox_matin.ResumeLayout(false);
             this.groupBox_matin.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -603,5 +637,8 @@
         private GroupBox groupBox_matin;
         private Label label_matin;
         private Button button_matin;
+        private NewProgressBar progressBar_temp;
+        private System.Windows.Forms.Timer timer_ProgressBar;
+        private Label label_heure;
     }
 }

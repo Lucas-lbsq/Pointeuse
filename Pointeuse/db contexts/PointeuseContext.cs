@@ -6,9 +6,9 @@ namespace Pointeuse.db_contexts
 {
     public class PointeuseContext : DbContext
     {
-        public DbSet<Users> Users { get; set; } = null!;
+        public DbSet<User> User { get; set; } = null!;
 
-        public DbSet<Pointage> Pointages { get; set; } = null!;
+        public DbSet<Pointage> Pointage { get; set; } = null!;
 
         public PointeuseContext(DbContextOptions<PointeuseContext> options)
             : base(options)

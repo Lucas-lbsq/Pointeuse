@@ -72,7 +72,7 @@ namespace Pointeuse
                 context.Database.EnsureCreated();
 
                 //Attribut les valeurs dans la DB
-                Users utilisateurInscription = new Users()
+                User utilisateurInscription = new User()
                 {
                     Nom = textBox_nom.Text,
                     Prenom = textBox_prenom.Text,
@@ -82,7 +82,7 @@ namespace Pointeuse
                 };
                 if (userTenteInscription(context, utilisateurInscription))
                 {
-                    context.Users.Add(utilisateurInscription);
+                    context.User.Add(utilisateurInscription);
                     if (context.SaveChanges() > 0)
                     {
                         MessageBox.Show("Ok, vous êtes inscrit", "Bravo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -104,9 +104,9 @@ namespace Pointeuse
             }         
             
         }
-        private bool userTenteInscription(PointeuseContext context, Users user)
+        private bool userTenteInscription(PointeuseContext context, User user)
         {
-            var userConnexion = context.Users.Where(u => u.Identifiant == user.Identifiant).FirstOrDefault();
+            var userConnexion = context.User.Where(u => u.Identifiant == user.Identifiant).FirstOrDefault();
             if (userConnexion != null)
             {
                 //Utilisateur avec cet identifiant déjà existant donc pas d'inscription possible

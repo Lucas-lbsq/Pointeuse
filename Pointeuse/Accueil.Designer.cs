@@ -50,10 +50,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.label_bonjour = new System.Windows.Forms.Label();
             this.label_date = new System.Windows.Forms.Label();
             this.label_heure = new System.Windows.Forms.Label();
             this.timer_heure = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_matin = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -64,6 +66,7 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -347,17 +350,6 @@
             this.sidebarTimer.Interval = 20;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // label_bonjour
-            // 
-            this.label_bonjour.AutoSize = true;
-            this.label_bonjour.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_bonjour.Location = new System.Drawing.Point(420, 50);
-            this.label_bonjour.Name = "label_bonjour";
-            this.label_bonjour.Size = new System.Drawing.Size(145, 47);
-            this.label_bonjour.TabIndex = 3;
-            this.label_bonjour.Text = "Bonjour";
-            this.label_bonjour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label_date
             // 
             this.label_date.AutoSize = true;
@@ -382,15 +374,51 @@
             // 
             this.timer_heure.Tick += new System.EventHandler(this.timer_label_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pointeuse.Properties.Resources.logo_CRAM;
+            this.pictureBox1.Location = new System.Drawing.Point(281, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(452, 386);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label_matin
+            // 
+            this.label_matin.AutoSize = true;
+            this.label_matin.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_matin.ForeColor = System.Drawing.Color.Brown;
+            this.label_matin.Location = new System.Drawing.Point(401, 9);
+            this.label_matin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_matin.Name = "label_matin";
+            this.label_matin.Size = new System.Drawing.Size(145, 47);
+            this.label_matin.TabIndex = 12;
+            this.label_matin.Text = "Bonjour";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Brown;
+            this.label2.Location = new System.Drawing.Point(282, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(390, 37);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Bienvenue sur notre pointeuse !";
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(930, 657);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_matin);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_heure);
             this.Controls.Add(this.label_date);
-            this.Controls.Add(this.label_bonjour);
             this.Controls.Add(this.sidebar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -410,6 +438,7 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,9 +466,11 @@
         private Panel panel8;
         private Button button7;
         private System.Windows.Forms.Timer sidebarTimer;
-        private Label label_bonjour;
         private Label label_date;
         private Label label_heure;
         private System.Windows.Forms.Timer timer_heure;
+        private PictureBox pictureBox1;
+        private Label label_matin;
+        private Label label2;
     }
 }
