@@ -10,7 +10,7 @@
         private void Pointages_Load(object sender, EventArgs e)
         {
 
-            timer_ProgressBar.Interval = 1000; //1 secondes
+            timer_ProgressBar.Interval = 100; //1 secondes
 
             timer_ProgressBar.Start();
         }
