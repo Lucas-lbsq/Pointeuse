@@ -23,10 +23,12 @@ namespace Pointeuse.db_contexts
             //SaveChanges();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
-            base.OnConfiguring(optionsBuilder);
-        }
+        //SUITE A DECOMMENTER SI MIGRATION !!!!
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlite("Data Source=Pointeuse.db");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
     }
 }

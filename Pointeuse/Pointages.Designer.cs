@@ -54,15 +54,23 @@ namespace Pointeuse
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox_pointages = new System.Windows.Forms.GroupBox();
             this.groupBox_soir = new System.Windows.Forms.GroupBox();
+            this.label_heure_soir = new System.Windows.Forms.Label();
+            this.label_pointage_soir = new System.Windows.Forms.Label();
             this.label_soir = new System.Windows.Forms.Label();
             this.button_soir = new System.Windows.Forms.Button();
             this.groupBox_midi = new System.Windows.Forms.GroupBox();
+            this.label_heure_midi = new System.Windows.Forms.Label();
+            this.label_pointage_midi = new System.Windows.Forms.Label();
             this.label_midi = new System.Windows.Forms.Label();
             this.button_midi = new System.Windows.Forms.Button();
             this.groupBox_apres_midi = new System.Windows.Forms.GroupBox();
+            this.label_heure_apres_midi = new System.Windows.Forms.Label();
+            this.label_pointage_apres_midi = new System.Windows.Forms.Label();
             this.label_apres_midi = new System.Windows.Forms.Label();
             this.button_apres_midi = new System.Windows.Forms.Button();
             this.groupBox_matin = new System.Windows.Forms.GroupBox();
+            this.label_heure_matin = new System.Windows.Forms.Label();
+            this.label_pointage_matin = new System.Windows.Forms.Label();
             this.label_matin = new System.Windows.Forms.Label();
             this.button_matin = new System.Windows.Forms.Button();
             this.progressBar_temp = new Pointeuse.Class.NewProgressBar();
@@ -372,29 +380,55 @@ namespace Pointeuse
             this.groupBox_pointages.Controls.Add(this.groupBox_midi);
             this.groupBox_pointages.Controls.Add(this.groupBox_apres_midi);
             this.groupBox_pointages.Controls.Add(this.groupBox_matin);
-            this.groupBox_pointages.Location = new System.Drawing.Point(100, 23);
+            this.groupBox_pointages.Location = new System.Drawing.Point(135, 23);
             this.groupBox_pointages.Name = "groupBox_pointages";
-            this.groupBox_pointages.Size = new System.Drawing.Size(616, 335);
+            this.groupBox_pointages.Size = new System.Drawing.Size(735, 362);
             this.groupBox_pointages.TabIndex = 13;
             this.groupBox_pointages.TabStop = false;
             this.groupBox_pointages.Text = "Pointages";
             // 
             // groupBox_soir
             // 
+            this.groupBox_soir.Controls.Add(this.label_heure_soir);
+            this.groupBox_soir.Controls.Add(this.label_pointage_soir);
             this.groupBox_soir.Controls.Add(this.label_soir);
             this.groupBox_soir.Controls.Add(this.button_soir);
-            this.groupBox_soir.Location = new System.Drawing.Point(380, 190);
+            this.groupBox_soir.Location = new System.Drawing.Point(406, 199);
             this.groupBox_soir.Name = "groupBox_soir";
-            this.groupBox_soir.Size = new System.Drawing.Size(223, 129);
+            this.groupBox_soir.Size = new System.Drawing.Size(302, 160);
             this.groupBox_soir.TabIndex = 14;
             this.groupBox_soir.TabStop = false;
+            // 
+            // label_heure_soir
+            // 
+            this.label_heure_soir.AutoSize = true;
+            this.label_heure_soir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_heure_soir.ForeColor = System.Drawing.Color.Brown;
+            this.label_heure_soir.Location = new System.Drawing.Point(161, 120);
+            this.label_heure_soir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_heure_soir.Name = "label_heure_soir";
+            this.label_heure_soir.Size = new System.Drawing.Size(18, 21);
+            this.label_heure_soir.TabIndex = 17;
+            this.label_heure_soir.Text = "a";
+            // 
+            // label_pointage_soir
+            // 
+            this.label_pointage_soir.AutoSize = true;
+            this.label_pointage_soir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_pointage_soir.ForeColor = System.Drawing.Color.Brown;
+            this.label_pointage_soir.Location = new System.Drawing.Point(7, 120);
+            this.label_pointage_soir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_pointage_soir.Name = "label_pointage_soir";
+            this.label_pointage_soir.Size = new System.Drawing.Size(146, 21);
+            this.label_pointage_soir.TabIndex = 14;
+            this.label_pointage_soir.Text = "Heure du pointage :";
             // 
             // label_soir
             // 
             this.label_soir.AutoSize = true;
             this.label_soir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_soir.ForeColor = System.Drawing.Color.Brown;
-            this.label_soir.Location = new System.Drawing.Point(32, 21);
+            this.label_soir.Location = new System.Drawing.Point(94, 21);
             this.label_soir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_soir.Name = "label_soir";
             this.label_soir.Size = new System.Drawing.Size(140, 25);
@@ -409,7 +443,7 @@ namespace Pointeuse
             this.button_soir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_soir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_soir.ForeColor = System.Drawing.Color.White;
-            this.button_soir.Location = new System.Drawing.Point(51, 63);
+            this.button_soir.Location = new System.Drawing.Point(94, 56);
             this.button_soir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_soir.Name = "button_soir";
             this.button_soir.Size = new System.Drawing.Size(132, 41);
@@ -420,20 +454,46 @@ namespace Pointeuse
             // 
             // groupBox_midi
             // 
+            this.groupBox_midi.Controls.Add(this.label_heure_midi);
+            this.groupBox_midi.Controls.Add(this.label_pointage_midi);
             this.groupBox_midi.Controls.Add(this.label_midi);
             this.groupBox_midi.Controls.Add(this.button_midi);
-            this.groupBox_midi.Location = new System.Drawing.Point(380, 35);
+            this.groupBox_midi.Location = new System.Drawing.Point(406, 22);
             this.groupBox_midi.Name = "groupBox_midi";
-            this.groupBox_midi.Size = new System.Drawing.Size(223, 129);
+            this.groupBox_midi.Size = new System.Drawing.Size(302, 160);
             this.groupBox_midi.TabIndex = 15;
             this.groupBox_midi.TabStop = false;
+            // 
+            // label_heure_midi
+            // 
+            this.label_heure_midi.AutoSize = true;
+            this.label_heure_midi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_heure_midi.ForeColor = System.Drawing.Color.Brown;
+            this.label_heure_midi.Location = new System.Drawing.Point(161, 120);
+            this.label_heure_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_heure_midi.Name = "label_heure_midi";
+            this.label_heure_midi.Size = new System.Drawing.Size(18, 21);
+            this.label_heure_midi.TabIndex = 14;
+            this.label_heure_midi.Text = "a";
+            // 
+            // label_pointage_midi
+            // 
+            this.label_pointage_midi.AutoSize = true;
+            this.label_pointage_midi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_pointage_midi.ForeColor = System.Drawing.Color.Brown;
+            this.label_pointage_midi.Location = new System.Drawing.Point(7, 120);
+            this.label_pointage_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_pointage_midi.Name = "label_pointage_midi";
+            this.label_pointage_midi.Size = new System.Drawing.Size(146, 21);
+            this.label_pointage_midi.TabIndex = 13;
+            this.label_pointage_midi.Text = "Heure du pointage :";
             // 
             // label_midi
             // 
             this.label_midi.AutoSize = true;
             this.label_midi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_midi.ForeColor = System.Drawing.Color.Brown;
-            this.label_midi.Location = new System.Drawing.Point(32, 21);
+            this.label_midi.Location = new System.Drawing.Point(94, 17);
             this.label_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_midi.Name = "label_midi";
             this.label_midi.Size = new System.Drawing.Size(117, 25);
@@ -448,7 +508,7 @@ namespace Pointeuse
             this.button_midi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_midi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_midi.ForeColor = System.Drawing.Color.White;
-            this.button_midi.Location = new System.Drawing.Point(51, 63);
+            this.button_midi.Location = new System.Drawing.Point(94, 45);
             this.button_midi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_midi.Name = "button_midi";
             this.button_midi.Size = new System.Drawing.Size(132, 41);
@@ -459,20 +519,46 @@ namespace Pointeuse
             // 
             // groupBox_apres_midi
             // 
+            this.groupBox_apres_midi.Controls.Add(this.label_heure_apres_midi);
+            this.groupBox_apres_midi.Controls.Add(this.label_pointage_apres_midi);
             this.groupBox_apres_midi.Controls.Add(this.label_apres_midi);
             this.groupBox_apres_midi.Controls.Add(this.button_apres_midi);
-            this.groupBox_apres_midi.Location = new System.Drawing.Point(33, 190);
+            this.groupBox_apres_midi.Location = new System.Drawing.Point(27, 199);
             this.groupBox_apres_midi.Name = "groupBox_apres_midi";
-            this.groupBox_apres_midi.Size = new System.Drawing.Size(223, 129);
+            this.groupBox_apres_midi.Size = new System.Drawing.Size(302, 160);
             this.groupBox_apres_midi.TabIndex = 16;
             this.groupBox_apres_midi.TabStop = false;
+            // 
+            // label_heure_apres_midi
+            // 
+            this.label_heure_apres_midi.AutoSize = true;
+            this.label_heure_apres_midi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_heure_apres_midi.ForeColor = System.Drawing.Color.Brown;
+            this.label_heure_apres_midi.Location = new System.Drawing.Point(161, 120);
+            this.label_heure_apres_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_heure_apres_midi.Name = "label_heure_apres_midi";
+            this.label_heure_apres_midi.Size = new System.Drawing.Size(18, 21);
+            this.label_heure_apres_midi.TabIndex = 15;
+            this.label_heure_apres_midi.Text = "a";
+            // 
+            // label_pointage_apres_midi
+            // 
+            this.label_pointage_apres_midi.AutoSize = true;
+            this.label_pointage_apres_midi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_pointage_apres_midi.ForeColor = System.Drawing.Color.Brown;
+            this.label_pointage_apres_midi.Location = new System.Drawing.Point(7, 120);
+            this.label_pointage_apres_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_pointage_apres_midi.Name = "label_pointage_apres_midi";
+            this.label_pointage_apres_midi.Size = new System.Drawing.Size(146, 21);
+            this.label_pointage_apres_midi.TabIndex = 13;
+            this.label_pointage_apres_midi.Text = "Heure du pointage :";
             // 
             // label_apres_midi
             // 
             this.label_apres_midi.AutoSize = true;
             this.label_apres_midi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_apres_midi.ForeColor = System.Drawing.Color.Brown;
-            this.label_apres_midi.Location = new System.Drawing.Point(32, 21);
+            this.label_apres_midi.Location = new System.Drawing.Point(51, 19);
             this.label_apres_midi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_apres_midi.Name = "label_apres_midi";
             this.label_apres_midi.Size = new System.Drawing.Size(185, 25);
@@ -487,7 +573,7 @@ namespace Pointeuse
             this.button_apres_midi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_apres_midi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_apres_midi.ForeColor = System.Drawing.Color.White;
-            this.button_apres_midi.Location = new System.Drawing.Point(51, 63);
+            this.button_apres_midi.Location = new System.Drawing.Point(79, 56);
             this.button_apres_midi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_apres_midi.Name = "button_apres_midi";
             this.button_apres_midi.Size = new System.Drawing.Size(132, 41);
@@ -498,20 +584,46 @@ namespace Pointeuse
             // 
             // groupBox_matin
             // 
+            this.groupBox_matin.Controls.Add(this.label_heure_matin);
+            this.groupBox_matin.Controls.Add(this.label_pointage_matin);
             this.groupBox_matin.Controls.Add(this.label_matin);
             this.groupBox_matin.Controls.Add(this.button_matin);
-            this.groupBox_matin.Location = new System.Drawing.Point(33, 35);
+            this.groupBox_matin.Location = new System.Drawing.Point(27, 22);
             this.groupBox_matin.Name = "groupBox_matin";
-            this.groupBox_matin.Size = new System.Drawing.Size(223, 129);
+            this.groupBox_matin.Size = new System.Drawing.Size(302, 160);
             this.groupBox_matin.TabIndex = 13;
             this.groupBox_matin.TabStop = false;
+            // 
+            // label_heure_matin
+            // 
+            this.label_heure_matin.AutoSize = true;
+            this.label_heure_matin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_heure_matin.ForeColor = System.Drawing.Color.Brown;
+            this.label_heure_matin.Location = new System.Drawing.Point(161, 120);
+            this.label_heure_matin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_heure_matin.Name = "label_heure_matin";
+            this.label_heure_matin.Size = new System.Drawing.Size(18, 21);
+            this.label_heure_matin.TabIndex = 13;
+            this.label_heure_matin.Text = "a";
+            // 
+            // label_pointage_matin
+            // 
+            this.label_pointage_matin.AutoSize = true;
+            this.label_pointage_matin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_pointage_matin.ForeColor = System.Drawing.Color.Brown;
+            this.label_pointage_matin.Location = new System.Drawing.Point(7, 120);
+            this.label_pointage_matin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_pointage_matin.Name = "label_pointage_matin";
+            this.label_pointage_matin.Size = new System.Drawing.Size(146, 21);
+            this.label_pointage_matin.TabIndex = 12;
+            this.label_pointage_matin.Text = "Heure du pointage :";
             // 
             // label_matin
             // 
             this.label_matin.AutoSize = true;
             this.label_matin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_matin.ForeColor = System.Drawing.Color.Brown;
-            this.label_matin.Location = new System.Drawing.Point(32, 21);
+            this.label_matin.Location = new System.Drawing.Point(68, 17);
             this.label_matin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_matin.Name = "label_matin";
             this.label_matin.Size = new System.Drawing.Size(160, 25);
@@ -526,7 +638,7 @@ namespace Pointeuse
             this.button_matin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_matin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_matin.ForeColor = System.Drawing.Color.White;
-            this.button_matin.Location = new System.Drawing.Point(51, 63);
+            this.button_matin.Location = new System.Drawing.Point(79, 51);
             this.button_matin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_matin.Name = "button_matin";
             this.button_matin.Size = new System.Drawing.Size(132, 41);
@@ -538,11 +650,10 @@ namespace Pointeuse
             // progressBar_temp
             // 
             this.progressBar_temp.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressBar_temp.Location = new System.Drawing.Point(231, 555);
+            this.progressBar_temp.Location = new System.Drawing.Point(241, 434);
             this.progressBar_temp.Name = "progressBar_temp";
             this.progressBar_temp.Size = new System.Drawing.Size(503, 23);
             this.progressBar_temp.TabIndex = 14;
-            this.progressBar_temp.Click += new System.EventHandler(this.progressBar_temp_Click);
             // 
             // timer_ProgressBar
             // 
@@ -551,12 +662,12 @@ namespace Pointeuse
             // label_heure
             // 
             this.label_heure.AutoSize = true;
-            this.label_heure.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_heure.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_heure.ForeColor = System.Drawing.Color.Brown;
-            this.label_heure.Location = new System.Drawing.Point(231, 527);
+            this.label_heure.Location = new System.Drawing.Point(241, 406);
             this.label_heure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_heure.Name = "label_heure";
-            this.label_heure.Size = new System.Drawing.Size(67, 25);
+            this.label_heure.Size = new System.Drawing.Size(64, 25);
             this.label_heure.TabIndex = 12;
             this.label_heure.Text = "Heure";
             // 
@@ -640,5 +751,13 @@ namespace Pointeuse
         private NewProgressBar progressBar_temp;
         private System.Windows.Forms.Timer timer_ProgressBar;
         private Label label_heure;
+        private Label label_pointage_soir;
+        private Label label_pointage_midi;
+        private Label label_pointage_apres_midi;
+        private Label label_pointage_matin;
+        private Label label_heure_soir;
+        private Label label_heure_midi;
+        private Label label_heure_apres_midi;
+        private Label label_heure_matin;
     }
 }
