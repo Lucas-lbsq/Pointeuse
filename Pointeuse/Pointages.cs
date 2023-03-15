@@ -10,7 +10,7 @@
         private void Pointages_Load(object sender, EventArgs e)
         {
 
-            timer_ProgressBar.Interval = 1000; //1 secondes
+            timer_ProgressBar.Interval = 100; //1 secondes
 
             timer_ProgressBar.Start();
         }
@@ -90,32 +90,55 @@
         private void button_matin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bonne matinée, le pointage a bien été pris en compte", "Pointage OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button_matin.Enabled = false;
+            if (button_matin.Enabled == false) // Vérifier si le bouton matin a été cliqué
+            {
+                DateTime heureActuelle = DateTime.Now;
+                label_heure_matin.Text = heureActuelle.ToString("HH:mm:ss");
+            }
         }
 
         private void button_midi_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bon appétit, le pointage a bien été pris en compte", "Pointage OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button_midi.Enabled= false;
+            if (button_midi.Enabled == false)
+            {
+                DateTime heureActuelle = DateTime.Now;
+                label_heure_midi.Text = heureActuelle.ToString("HH:mm:ss");
+            }
         }
 
         private void button_apres_midi_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bonne après midi, le pointage a bien été pris en compte", "Pointage OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button_apres_midi.Enabled = false;
+            if (button_apres_midi.Enabled == false)
+            {
+                DateTime heureActuelle = DateTime.Now;
+                label_heure_apres_midi.Text = heureActuelle.ToString("HH:mm:ss");
+            }
         }
 
         private void button_soir_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bonne soirée, le pointage a bien été pris en compte", "Pointage OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button_soir.Enabled = false;
+            if (button_soir.Enabled == false)
+            {
+                DateTime heureActuelle = DateTime.Now;
+                label_heure_soir.Text = heureActuelle.ToString("HH:mm:ss");
+            }
         }
 
         private void timer_ProgressBar_Tick(object sender, EventArgs e)
         {
-
             DateTime heureActuelle = DateTime.Now;
             progressBar_temp.Style = ProgressBarStyle.Continuous;
             label_heure.Text = heureActuelle.ToString("HH:mm:ss");
 
-            int HeureDebut = 12;
-            int HeureFin = 13;
+            int HeureDebut = 9;
+            int HeureFin = 18;
 
             if (heureActuelle.Hour >= HeureDebut && heureActuelle.Hour < HeureFin)
             {
@@ -134,11 +157,5 @@
             }
 
         }
-
-        private void progressBar_temp_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
